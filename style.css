@@ -1,0 +1,118 @@
+body, html {
+    padding: 0%;
+    margin: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+/* container for all content on page */
+#content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-areas: 
+            "header"
+            "body"
+            "footer";
+    grid-gap: 80px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* grid for organizing all content inside header */
+.header {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: 
+                "title"
+                "buttons";
+
+    justify-items: center;
+    align-items: center;
+    grid-gap: 5px;
+    margin: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* restaurant title */
+.title {
+    position: relative;
+    top: 30px;
+    grid-area: "title";
+    justify-self: center;
+    align-self: end;
+    font-family: Papyrus;
+    font-size: 100px;
+    margin: 0;
+}
+/* grid for containing buttons */
+.buttonGrid {
+    grid-area: "buttons";
+    display: flex;
+    align-self: end;
+}
+
+button {
+    position: relative;
+    width: 200px;
+    height: 70px;
+    border: transparent;
+    outline: transparent;
+    background-color: white;
+    color: black;
+    font-family: Avenir Next Condensed Ultra Light;
+    font-size: 50px;
+    bottom: 10px;
+}
+
+/* .home {
+    border-bottom: 5px solid black;
+} */
+
+/* .menu {
+    border-bottom: 5px solid black;
+} */
+
+/* .contact {
+    border-bottom: 5px solid black;
+} */
+
+/* Grid container for 'main' content */
+.main {
+    grid-area: "body";
+    display: grid;
+    background-color: white;
+    height: 1500px;
+    width: 90%;
+    border-radius: 2.5px;
+
+}
+
+.content {
+    justify-self: center;
+    align-self: center;
+}
+
+.footer {
+    grid-area: "footer";
+    display: flex;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    justify-content: center;
+    background-color: white;
+}
+
+.outro {
+    font-family: Avenir Next Condensed Ultra Light;
+    font-size: 55px;
+    margin: 5px;
+    justify-self: center;
+}
