@@ -31,22 +31,22 @@ const clickedTab = (function() {
 
         switch(true) {
             case this.textContent === 'Menu':
+                _tabCreate('Menu');
                 home.classList.remove('choiceButton');
                 contact.classList.remove('choiceButton');
                 this.classList.add('choiceButton');
-                _tabCreate('Menu');
             break;
             case this.textContent === 'Contact Us':
+                _tabCreate("Contact Us");
                 home.classList.remove('choiceButton');
                 menu.classList.remove('choiceButton');
                 this.classList.add('choiceButton');
-                _tabCreate("Contact Us");
             break;
             case this.textContent === 'Home':
+                _tabCreate("Home");
                 menu.classList.remove('choiceButton');
                 contact.classList.remove('choiceButton');    
                 this.classList.add('choiceButton');
-                _tabCreate("Home");
             break;
         }
     }
@@ -54,17 +54,30 @@ const clickedTab = (function() {
     // private function that displays content for current tab
     function _tabCreate(tab) {
 
+        // variable used to stop spammed tab selection
+        const tabHighlight = document.querySelector('.choiceButton');
+
         switch(true) {
             case tab === "Menu":
-                tabControls.enableMenu();
-                tabControls.disableMain();
+                if (tabHighlight.textContent === "Menu") {
+                } else {
+                    tabControls.enableMenu();
+                    tabControls.disableMain();
+                }
             break;
             case tab === "Contact Us":
-                console.log(tab);
+                if (tabHighlight.textContent === "Contact Us") {
+                } else {
+                    console.log(tab);                    
+                }   
             break;
             case tab === "Home":
-                tabControls.disableMenu();
-                tabControls.enableMain();
+                if (tabHighlight.textContent === "Home") {
+
+                } else {
+                    tabControls.disableMenu();
+                    tabControls.enableMain();
+                } 
             break;
         }
 

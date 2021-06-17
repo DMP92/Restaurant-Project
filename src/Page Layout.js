@@ -37,7 +37,7 @@ const header = (function() {
     function createHeader() {
         content.appendChild(headerGrid);
 
-        title.textContent = 'Restaurant';
+        title.textContent = 'Fructece';
         homeTab.textContent = 'Home';
         menuTab.textContent = 'Menu';
         contactTab.textContent = "Contact Us";
@@ -114,7 +114,7 @@ const footerContent = (function() {
         // append footer to page
         content.appendChild(footer);
         
-        h3.textContent = "Name";
+        h3.textContent = "Footer of Website";
         footer.appendChild(h3);
     }
 
