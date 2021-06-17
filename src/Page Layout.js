@@ -1,16 +1,29 @@
 import { menuTab } from "./Menu.js";
 
-// creates header
+// **** Page Layout.js is a file that does two things:
+
+//      1. Creates the grid that contains:
+//              - the header
+//              - the main content area
+//              - the footer
+
+//      2. It gathers the content created by each tab ('Home', 'Menu' and 'Contact Us') and then
+//         exports everything in a module to 'index.js' where it can all be neatly accessed through
+//         the interface created in the tabControls revealing module pattern
+
+
+// module for header creation
 const header = (function() {
 
         // grab content div
         const content = document.getElementById('content');
-        // creates components of header grid div
+        // creates components of header grid 
         const headerGrid = document.createElement('div');
                 headerGrid.classList.add('header');
         const title = document.createElement('h1');
                 title.classList.add('title');
-        // tab grid div
+                
+        // variables for each tab in tab-selection-grid
         const tabGrid = document.createElement('div');
                 tabGrid.classList.add('buttonGrid');
         const homeTab = document.createElement('button');
@@ -20,7 +33,7 @@ const header = (function() {
         const contactTab = document.createElement('button');
                 contactTab.classList.add('contact');
 
-    // function for header creation
+    // function that constructs header
     function createHeader() {
         content.appendChild(headerGrid);
 
@@ -44,7 +57,8 @@ const header = (function() {
 })();
 
 
-// controls tab functionality
+// module that gathers logic from each exported module and forms a main control interface
+// that is then used in the 'index.js' file to allow for tabbed browsing
 const tabControls = (function() {
 
         // grabs content div & creates each tab
@@ -82,18 +96,19 @@ const tabControls = (function() {
 
 })();
 
-// creates footer
+// module that creates footer
 const footerContent = (function() {
     
-        // grab content div
+        // grabs content div
         const content = document.getElementById('content');
+
         // create footer div
         const footer = document.createElement('div');
                 footer.classList.add('footer');
         const h3 = document.createElement('h3');
                 h3.classList.add('outro');
 
-    // function creating footer
+    // function that creates the footer
     function createFooter() {
 
         // append footer to page

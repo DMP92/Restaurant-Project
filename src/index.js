@@ -1,16 +1,19 @@
 import {header, tabControls, footerContent} from "./Page Layout.js";
-// general page layout
+
+// establishes page layout
 header.header();
 tabControls.enableMain();
 footerContent.footer();
-// logic for tab content
+
+// logic for tabbed browsing
 const clickedTab = (function() {
     
-            // grab tabs
+            // variables for grabbing each tab
             const home = document.querySelector('.home');
             const menu = document.querySelector('.menu');
             const contact = document.querySelector('.contact');
-            // targets home tab on page load
+
+            // event listener that targets home tab on page load
             window.addEventListener('load', _defaultTab);
             
             // private function for making home the default tab
@@ -18,12 +21,12 @@ const clickedTab = (function() {
                 home.classList.add('choiceButton');
             }
 
-            // run logic when a tab is clicked
+            // event listeners for each tab
             home.addEventListener('click', tabSelect);
             menu.addEventListener('click', tabSelect);
             contact.addEventListener('click', tabSelect);
                  
-        // adds bottom border to clicked tab
+    // adds a bottom border to highlight current tab
     function tabSelect() {
 
         switch(true) {
@@ -48,11 +51,9 @@ const clickedTab = (function() {
         }
     }
 
-    // private function that prints content for each tab
+    // private function that displays content for current tab
     function _tabCreate(tab) {
 
-        // var used to grab current tab
-        const underlined = document.querySelector('.choiceButton');
         switch(true) {
             case tab === "Menu":
                 tabControls.enableMenu();

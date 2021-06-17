@@ -1,12 +1,9 @@
 
 function itemFactory(name, price) {
-    
-    
-
 
     function createItem() {
 
-        // var for getting menu div and creating item objects    
+        // variables for getting menu div and creating item objects    
         let content = document.getElementById('content');
         let menu = document.querySelector('.menu');
         let itemCreate = document.createElement('div');
