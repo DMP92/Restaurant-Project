@@ -2,6 +2,87 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/Home.js":
+/*!*********************!*\
+  !*** ./src/Home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "homeTab": () => (/* binding */ homeTab)
+/* harmony export */ });
+// Module for 'Home' tab content creation
+
+const homeTab = (function() {
+
+    // variable grabs content div
+    const content = document.getElementById('content');
+
+    // grabs the 'homeTab' div
+    const homeTab = document.createElement('div');
+            homeTab.classList.add('homeTab');
+    // creates homeTabLogo div
+    const homeTabLogo = document.createElement('div');
+            homeTabLogo.classList.add('homeTabLogo');
+
+
+    // creates homeTabTitle text
+    const homeTabTitle = document.createElement('h2');
+            homeTabTitle.classList.add('homeTabTitle');
+            homeTabTitle.textContent = "Coolest froyo in town! title";
+
+    // creates homeTabContent div
+    const homeTabContent = document.createElement('div');
+            homeTabContent.classList.add('homeTabContent');
+            
+    // creates text & a button for homeTabContent
+    const hTCTitle = document.createElement('h2');
+            hTCTitle.classList.add('hTCTitle');
+            hTCTitle.textContent = "Gift Cards make the coolest gifts!";
+    const hTCText = document.createElement('h3');
+            hTCText.classList.add('hTCText');
+            hTCText.textContent = "Treat the graduates in your life to their favorite flavors!"
+    const hTCButton = document.createElement('button');
+            hTCButton.classList.add('hTCButton');
+            hTCButton.textContent = "Order online";
+
+    // creates homeTabOutro div
+    const homeTabOutro = document.createElement('div');
+            homeTabOutro.classList.add('homeTabOutro');
+            homeTabOutro.textContent = 'outro section';
+
+    // function that appends each element made above to to 'homeTab' div
+    function homeTabCreate() {
+        content.appendChild(homeTab);
+        homeTab.appendChild(homeTabLogo);
+        // homeTab.appendChild(homeTabTitle);
+        homeTab.appendChild(homeTabContent);
+        homeTabContent.appendChild(hTCTitle);
+        homeTabContent.appendChild(hTCText);
+        homeTabContent.appendChild(hTCButton);
+        homeTab.appendChild(homeTabOutro);
+    }
+
+    function homeTabDisable() {
+        content.removeChild(homeTab);
+        homeTab.removeChild(homeTabLogo);
+        homeTab.removeChild(homeTabTitle);
+        homeTab.removeChild(homeTabContent);
+        homeTab.removeChild(homeTabOutro);
+    }
+
+    return {
+        homeCreate: homeTabCreate,
+        homeDisable: homeTabDisable
+    }
+
+})();
+
+
+
+/***/ }),
+
 /***/ "./src/Menu.js":
 /*!*********************!*\
   !*** ./src/Menu.js ***!
@@ -12,43 +93,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "menuTab": () => (/* binding */ menuTab)
 /* harmony export */ });
-
-function itemFactory(name, price) {
-
-    // variables for getting menu div and creating item objects    
-    let content = document.getElementById('content');
-    let menu = document.querySelector('.menuTab');
-    let menuItem = document.createElement('div');
-            menuItem.classList.add('menuItem2');
-    
-    // variables for creating each menu item's content
-    let menuPicture = document.createElement('div');
-            menuPicture.classList.add('itemPicture')
-    let topDescription = document.createElement('div');
-            topDescription.classList.add('topDescription');
-    let bottomDescription = document.createElement('div');
-            bottomDescription.classList.add('bottomDescription');
-    
-            
-    function createItem(string) {
-                
-        menuItem.classList.add('menuItem');
-        menuPicture.textContent = name;
-        topDescription.textContent = string;
-        bottomDescription.textContent = price;
-
-        
-        menu.appendChild(menuItem);
-        menuItem.appendChild(menuPicture);
-        menuItem.appendChild(topDescription);
-        menuItem.appendChild(bottomDescription);
-    }
-
-    return {createItem}
-}
-
-
-
 // module for menu content 
 
 const menuTab = (function() {
@@ -76,59 +120,56 @@ const menuTab = (function() {
                 'Made from vanilla beans organically sourced from the island of Papua New Guinea';
 
     // menu item 2 
-    let menu2 = document.createElement('div');
     const menuItem2 = document.createElement('div');
     const menuPicture2 = document.createElement('div');
     const topDescription2 = document.createElement('div');
     const bottomDescription2 = document.createElement('div');
 
                 // style + text of menu item 2
-                menu2.classList.add('menuTab');
                 menuItem2.classList.add('menuItem');
                 menuPicture2.classList.add('itemPicture');
-                menuPicture2.style.cssText = "background-image: url(/src/Images/OP-Rest-Choc.jpg);";
+                menuPicture2.style.cssText = "background-image: url(/src/Images/OP-Rest-Choc.jpg); align-self: center;";
                 topDescription2.classList.add('topDescription');
                 topDescription2.textContent = 'Belgium Chocolate Special';
                 bottomDescription2.classList.add('bottomDescription');
-                bottomDescription2.textContent = '$15.99';
+                bottomDescription2.textContent = 'Rich decadent chocolate.';
 
     // menu item 3
-    let menu3 = document.createElement('div');
     const menuItem3 = document.createElement('div');
     const menuPicture3 = document.createElement('div');
     const topDescription3 = document.createElement('div');
     const bottomDescription3 = document.createElement('div');
     
                 // style + text of menu item 3
-                menu3.classList.add('menuTab');
                 menuItem3.classList.add('menuItem');
                 menuPicture3.classList.add('itemPicture');
-                menuPicture3.style.cssText = "background-image: url(/src/Images/OP-Rest-Coffee2.jpg);";
+                menuPicture3.style.cssText = "background-image: url(/src/Images/OP-Rest-Coffee3.jpg); ";
                 topDescription3.classList.add('topDescription');
                 topDescription3.textContent = 'Coffee Dolce';
                 bottomDescription3.classList.add('bottomDescription');
                 bottomDescription3.textContent = 'Made from 100% Hawaiian Kona Coffee Beans';
 
     // menu item 4
-    let menu4 = document.createElement('div');
     const menuItem4 = document.createElement('div');
     const menuPicture4 = document.createElement('div');
     const topDescription4 = document.createElement('div');
     const bottomDescription4 = document.createElement('div');
                         
                 // style + text of menu item 4
-                menu4.classList.add('menuTab');
+                
                 menuItem4.classList.add('menuItem');
                 menuPicture4.classList.add('itemPicture');
+                menuPicture4.style.cssText = "background-image: url(/src/Images/OP-Rest-Peach280.jpg);";
                 topDescription4.classList.add('topDescription');
-                topDescription4.textContent = 'Belgium Chocolate Special';
+                topDescription4.textContent = 'Georgia Peach Cobbler';
                 bottomDescription4.classList.add('bottomDescription');
-                bottomDescription4.textContent = '$15.99';
+                bottomDescription4.textContent = 'Made with organic Georgia peaches, this cobbler has been a fan favorite for nearly a decade!';
         
     // function that prints each menu item
     function enableMenu() {
         
         // prints menu item 1
+        menu.classList.add('menuTab');
         content.appendChild(menu);
         menu.appendChild(menuItem);
         menuItem.appendChild(menuPicture);
@@ -136,21 +177,18 @@ const menuTab = (function() {
         menuItem.appendChild(bottomDescription);
 
         // prints menu item 2
-        content.appendChild(menu);
         menu.appendChild(menuItem2);
         menuItem2.appendChild(menuPicture2);
         menuItem2.appendChild(topDescription2);
         menuItem2.appendChild(bottomDescription2); 
         
         // prints menu item 2
-        content.appendChild(menu);
         menu.appendChild(menuItem3);
         menuItem3.appendChild(menuPicture3);
         menuItem3.appendChild(topDescription3);
         menuItem3.appendChild(bottomDescription3); 
 
         // prints menu item 2
-        content.appendChild(menu);
         menu.appendChild(menuItem4);
         menuItem4.appendChild(menuPicture4);
         menuItem4.appendChild(topDescription4);
@@ -194,13 +232,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "footerContent": () => (/* binding */ footerContent)
 /* harmony export */ });
 /* harmony import */ var _Menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Menu.js */ "./src/Menu.js");
+/* harmony import */ var _Home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.js */ "./src/Home.js");
+
 
 
 // **** Page Layout.js is a file that does two things:
 
 //      1. Creates the grid that contains:
 //              - the header
-//              - the main content area
+//              - the home content area
 //              - the footer
 
 //      2. It gathers the content created by each tab ('Home', 'Menu' and 'Contact Us') and then
@@ -259,18 +299,22 @@ const tabControls = (function() {
 
         // grabs content div & creates each tab
         const content = document.getElementById('content');
-        const main = document.createElement('div');
+        const home = document.createElement('div');
         
             
-    function mainTab() {
-        content.appendChild(main);
-        main.classList.add('mainTab');
+    function enableHome() {
+        // content.appendChild(home);
+        // home.classList.add('homeTab');
+        // footerContent.footer();
+        _Home_js__WEBPACK_IMPORTED_MODULE_1__.homeTab.homeCreate();
         footerContent.footer();
+
     }
 
-    function disableMain() {
-        content.removeChild(main);
-        main.classList.remove('mainTab');
+    function disableHome() {
+        // content.removeChild(home);
+        // home.classList.remove('homeTab');
+        _Home_js__WEBPACK_IMPORTED_MODULE_1__.homeTab.homeDisable();
     };
 
     function enableMenu() {
@@ -284,8 +328,8 @@ const tabControls = (function() {
     }
 
     return {
-    enableMain: mainTab,
-    disableMain: disableMain,
+    enableHome: enableHome,
+    disableHome: disableHome,
     enableMenu: enableMenu,
     disableMenu: disableMenu
     }
@@ -395,7 +439,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // establishes page layout
 _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.header.header();
-_Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableMain();
+_Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableHome();
 _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.footerContent.footer();
 
 // logic for tabbed browsing
@@ -454,8 +498,8 @@ const clickedTab = (function() {
             case tab === "Menu":
                 if (tabHighlight.textContent === "Menu") {
                 } else {
+                    _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableHome();
                     _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableMenu();
-                    _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableMain();
                 }
             break;
             case tab === "Contact Us":
@@ -469,7 +513,7 @@ const clickedTab = (function() {
 
                 } else {
                     _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableMenu();
-                    _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableMain();
+                    _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableHome();
                 } 
             break;
         }

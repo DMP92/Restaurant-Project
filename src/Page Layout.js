@@ -1,10 +1,11 @@
-import { menuTab } from "./Menu.js";
+import  {menuTab}  from "./Menu.js";
+import  {homeTab}  from "./Home.js";
 
 // **** Page Layout.js is a file that does two things:
 
 //      1. Creates the grid that contains:
 //              - the header
-//              - the main content area
+//              - the home content area
 //              - the footer
 
 //      2. It gathers the content created by each tab ('Home', 'Menu' and 'Contact Us') and then
@@ -63,18 +64,22 @@ const tabControls = (function() {
 
         // grabs content div & creates each tab
         const content = document.getElementById('content');
-        const main = document.createElement('div');
+        const home = document.createElement('div');
         
             
-    function mainTab() {
-        content.appendChild(main);
-        main.classList.add('mainTab');
+    function enableHome() {
+        // content.appendChild(home);
+        // home.classList.add('homeTab');
+        // footerContent.footer();
+        homeTab.homeCreate();
         footerContent.footer();
+
     }
 
-    function disableMain() {
-        content.removeChild(main);
-        main.classList.remove('mainTab');
+    function disableHome() {
+        // content.removeChild(home);
+        // home.classList.remove('homeTab');
+        homeTab.homeDisable();
     };
 
     function enableMenu() {
@@ -88,8 +93,8 @@ const tabControls = (function() {
     }
 
     return {
-    enableMain: mainTab,
-    disableMain: disableMain,
+    enableHome: enableHome,
+    disableHome: disableHome,
     enableMenu: enableMenu,
     disableMenu: disableMenu
     }

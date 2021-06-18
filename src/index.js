@@ -2,7 +2,7 @@ import {header, tabControls, footerContent} from "./Page Layout.js";
 
 // establishes page layout
 header.header();
-tabControls.enableMain();
+tabControls.enableHome();
 footerContent.footer();
 
 // logic for tabbed browsing
@@ -61,8 +61,8 @@ const clickedTab = (function() {
             case tab === "Menu":
                 if (tabHighlight.textContent === "Menu") {
                 } else {
+                    tabControls.disableHome();
                     tabControls.enableMenu();
-                    tabControls.disableMain();
                 }
             break;
             case tab === "Contact Us":
@@ -76,7 +76,7 @@ const clickedTab = (function() {
 
                 } else {
                     tabControls.disableMenu();
-                    tabControls.enableMain();
+                    tabControls.enableHome();
                 } 
             break;
         }
