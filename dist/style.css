@@ -104,12 +104,12 @@ button {
     grid-area: "body";
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: 40%  40% 10% 10%;
+    grid-template-rows: 30%  10% 50% 10%;
     grid-template-areas: 
             "homeLogo homeLogo"
             /* "homeTabTitle homeTabTitle" */
-            "homeTabContent"
-            "homeTabOutro";
+            "homeTabIntro"
+            "homeTabContent";
     grid-gap: 20px;
     
     background-image: url(/src/Images/fructeceBG.svg);
@@ -126,21 +126,23 @@ button {
 /* homeTab logo */
 .homeTabLogo {
     display: grid;
-    width: 50%;
-    height: 70%;
+    width: 96.5%;
+    height: 80%;
     grid-area: "homeLogo";
-    grid-column: 2/4;
-    grid-row: 1/2;
+    grid-column: 1/5;
+    grid-row: 0/2;
     justify-self: center;
-    align-self: center;
-    border-radius: 50%;
+    align-self: start;
+    
     justify-items: center;
-    background-color: rgba(222, 90, 109, .3);
+    background-color: rgb(255, 204, 197);
     box-shadow: 0px 0px 5px black inset;
-    align-items: end;
     background-image: url(/src/Images/OP-Rest-Logo-red-2.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position-x: 50%;
+    background-position-y: 10px;
+    
+
 }
 
 
@@ -157,6 +159,26 @@ button {
     color: black;
 } */
 
+/* homeTab Intro */
+.homeTabIntro {
+    display: grid;
+    justify-self: center;
+    justify-content: center;
+    align-items: end;
+    grid-area: "homeTabIntro";
+    width: 80%;
+    height: 100%;
+    background-color: #bc2c5c;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px black;
+    grid-column: 1/5;
+    grid-row: 2/3;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* homeTab content */
 .homeTabContent {
     display: grid;
@@ -170,17 +192,20 @@ button {
     
     justify-self: center;
     justify-content: center;
+
     align-items: center;
     grid-column: 1/5;
-    grid-row: 2/3;
+    grid-row: 3/4;
     grid-area: "homeTabContent";
-    width: 95%;
+    width: 80%;
     height: 100%;
     background-color: #f26b4b;
-    background-image: url(/src/Images/Card-Image-Final.png);
+    background-image: url(/src/Images/OP-Rest-Finalized-Card2_400x400.png);
     background-repeat: no-repeat;
     background-position-x: 85%;
     background-position-y: 50%;
+    box-shadow: inset 0px 0px 5px black;
+    border-radius: 5px;
 }
 
 /* grid items for '.homeTabContent */
@@ -238,19 +263,6 @@ button {
             border: 5px solid rgba(255, 255, 255, 1);
         }
 
-/* homeTab outro */
-.homeTabOutro {
-    display: grid;
-    justify-content: center;
-    align-items: end;
-    grid-area: "homeTabOutro";
-    width: 100%;
-    height: 100%;
-    background-color: lightcoral;
-    grid-column: 2/4;
-    grid-row: 3/4;
-    
-}
 
 /* Grid container for "menu" tab content */
 .menuTab {
@@ -312,7 +324,7 @@ button {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
-.outro {
+.Intro {
     font-family: Avenir Next Condensed;
     font-weight: 300;
     font-size: 55px;

@@ -25,37 +25,37 @@ const homeTab = (function() {
     // creates text & a button for homeTabContent
     const hTCTitle = document.createElement('h2');
             hTCTitle.classList.add('hTCTitle');
-            hTCTitle.textContent = "Gift Cards make the coolest gifts!";
+            hTCTitle.textContent = "Gift cards make the coolest gifts!";
     const hTCText = document.createElement('h3');
             hTCText.classList.add('hTCText');
-            hTCText.textContent = "Treat the graduates in your life to their favorite flavors!"
+            hTCText.textContent = "Treat the graduates in your life to their favorite flavors!";
     const hTCButton = document.createElement('button');
             hTCButton.classList.add('hTCButton');
             hTCButton.textContent = "Order online";
 
-    // creates homeTabOutro div
-    const homeTabOutro = document.createElement('div');
-            homeTabOutro.classList.add('homeTabOutro');
-            homeTabOutro.textContent = 'outro section';
+    // creates homeTabIntro div
+    const homeTabIntro = document.createElement('div');
+            homeTabIntro.classList.add('homeTabIntro');
+            homeTabIntro.textContent = "Opened . Quality you can taste!";
 
     // function that appends each element made above to to 'homeTab' div
     function homeTabCreate() {
         content.appendChild(homeTab);
         homeTab.appendChild(homeTabLogo);
+        homeTab.appendChild(homeTabIntro);
         // homeTab.appendChild(homeTabTitle);
         homeTab.appendChild(homeTabContent);
         homeTabContent.appendChild(hTCTitle);
         homeTabContent.appendChild(hTCText);
         homeTabContent.appendChild(hTCButton);
-        homeTab.appendChild(homeTabOutro);
     }
 
     function homeTabDisable() {
         content.removeChild(homeTab);
         homeTab.removeChild(homeTabLogo);
-        homeTab.removeChild(homeTabTitle);
+        // homeTab.removeChild(homeTabTitle);
         homeTab.removeChild(homeTabContent);
-        homeTab.removeChild(homeTabOutro);
+        homeTab.removeChild(homeTabIntro);
     }
 
     return {
@@ -66,3 +66,14 @@ const homeTab = (function() {
 })();
 
 export {homeTab};
+
+// notes
+/* 
+Switch the gift card section with the Intro section
+make the Intro section a proper about us section
+
+build the contact us logic
+
+then once everything is finished, get it to be responsive -- something you should've been doing already
+but stuff happens.
+*/
