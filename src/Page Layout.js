@@ -1,6 +1,6 @@
 import  {menuTab}  from "./Menu.js";
 import  {homeTab}  from "./Home.js";
-
+import {contactUsTab} from "./Contact.js";
 // **** Page Layout.js is a file that does two things:
 
 //      1. Creates the grid that contains:
@@ -92,11 +92,22 @@ const tabControls = (function() {
         menuTab.disable();
     }
 
+    function enableContact() {
+        contactUsTab.create();
+        footerContent.footer();
+    }
+
+    function disableContact() {
+        contactUsTab.disable();
+    }
+
     return {
     enableHome: enableHome,
     disableHome: disableHome,
     enableMenu: enableMenu,
-    disableMenu: disableMenu
+    disableMenu: disableMenu,
+    enableContact: enableContact,
+    disableContact: disableContact
     }
 
 })();

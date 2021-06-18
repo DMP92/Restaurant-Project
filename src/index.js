@@ -8,6 +8,9 @@ footerContent.footer();
 // logic for tabbed browsing
 const clickedTab = (function() {
     
+            // array that tracks the last two clicked tabs
+            const tabArray = [];
+
             // variables for grabbing each tab
             const home = document.querySelector('.home');
             const menu = document.querySelector('.menu');
@@ -19,6 +22,7 @@ const clickedTab = (function() {
             // private function for making home the default tab
             function _defaultTab() {
                 home.classList.add('choiceButton');
+                tabArray.push('Home');
             }
 
             // event listeners for each tab
@@ -31,24 +35,33 @@ const clickedTab = (function() {
 
         switch(true) {
             case this.textContent === 'Menu':
+                tabArray.push('Menu');
                 _tabCreate('Menu');
                 home.classList.remove('choiceButton');
                 contact.classList.remove('choiceButton');
                 this.classList.add('choiceButton');
             break;
             case this.textContent === 'Contact Us':
+                tabArray.push('Contact Us');
                 _tabCreate("Contact Us");
                 home.classList.remove('choiceButton');
                 menu.classList.remove('choiceButton');
                 this.classList.add('choiceButton');
             break;
             case this.textContent === 'Home':
+                tabArray.push('Home');
                 _tabCreate("Home");
                 menu.classList.remove('choiceButton');
                 contact.classList.remove('choiceButton');    
                 this.classList.add('choiceButton');
             break;
         }
+
+        // conditional that keeps only the last two clicked tabs in an array for use in the _tabCreate function
+        if (tabArray.length == 2) {
+            tabArray.shift();
+        }
+
     }
 
     // private function that displays content for current tab
@@ -59,24 +72,56 @@ const clickedTab = (function() {
 
         switch(true) {
             case tab === "Menu":
+                // conditional that ensures user cannot spam the tab
                 if (tabHighlight.textContent === "Menu") {
                 } else {
-                    tabControls.disableHome();
-                    tabControls.enableMenu();
+                    // switch statement ensuring that functions for removing
+                    // DOM elements will not conflict with one another
+                    switch(true) {
+                        case tabArray[0] === "Home":
+                            tabControls.disableHome();
+                            tabControls.enableMenu();
+                        break;
+                        case tabArray[0] === "Contact Us":
+                            tabControls.disableContact();
+                            tabControls.enableMenu();  
+                        break;
+                    }
                 }
             break;
             case tab === "Contact Us":
+                // conditional that ensures user cannot spam the tab
                 if (tabHighlight.textContent === "Contact Us") {
                 } else {
-                    console.log(tab);                    
+                    // switch statement ensuring that functions for removing
+                    // DOM elements will not conflict with one another
+                    switch(true) {
+                        case tabArray[0] === "Home":
+                            tabControls.disableHome();
+                            tabControls.enableContact();
+                        break;
+                        case tabArray[0] === "Menu":
+                            tabControls.disableMenu();
+                            tabControls.enableContact();  
+                        break;
+                    }
                 }   
             break;
             case tab === "Home":
+                // conditional that ensures user cannot spam the tab
                 if (tabHighlight.textContent === "Home") {
 
                 } else {
-                    tabControls.disableMenu();
-                    tabControls.enableHome();
+                    switch(true) {
+                        case tabArray[0] === "Contact Us":
+                            tabControls.disableContact();
+                            tabControls.enableHome();
+                        break;
+                        case tabArray[0] === "Menu":
+                            tabControls.disableMenu();
+                            tabControls.enableHome();  
+                        break;
+                    }
                 } 
             break;
         }
