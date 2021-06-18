@@ -2,6 +2,46 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/Contact.js":
+/*!************************!*\
+  !*** ./src/Contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "contactUsTab": () => (/* binding */ contactUsTab)
+/* harmony export */ });
+// this module contains a revealing module pattern for the contact tab in this project
+
+// logic for contact tab
+const contactUsTab = (function() {
+
+    // variable that grabs #content div
+    const content = document.getElementById('content');
+
+    // variables that create contact us tab
+    const contactTab = document.createElement('div');
+                contactTab.classList.add('contactTab');
+
+    function createContactTab() {
+        content.appendChild(contactTab);
+    }
+
+    function disableContactTab() {
+        content.removeChild(contactTab);
+    }
+
+    return {
+        create: createContactTab,
+        disable: disableContactTab
+    }
+})();
+
+
+
+/***/ }),
+
 /***/ "./src/Home.js":
 /*!*********************!*\
   !*** ./src/Home.js ***!
@@ -35,11 +75,25 @@ const homeTab = (function() {
     // creates homeTabContent div
     const homeTabContent = document.createElement('div');
             homeTabContent.classList.add('homeTabContent');
+
+    // creates homeTabIntro div
+    const homeTabIntro = document.createElement('div');
+            homeTabIntro.classList.add('homeTabIntro'); 
+
+    // creates a heading for the homeTabIntro section
+    const homeTabIntroHeader = document.createElement('h2');
+            homeTabIntroHeader.classList.add('homeTabIntroHeader');
+            homeTabIntroHeader.textContent = "Who we are";
+
+    // creates text for the homeTabIntro section
+    const homeTabIntroText = document.createElement('h2');
+            homeTabIntroText.classList.add('homeTabIntroText');
+            homeTabIntroText.textContent = "100% organic and GMO free. A family owned business since the summer 1855. We've been helping people beat the summer heat for nearly two centuries! We don't have a huge menu, but here at Fructece -- we believe in quality over quantity. We source our organic ingredients from all over the world. Whether it's our 'Belgium Chocolate Special' made with real Belgium chocolate, or our 'Classic Vanilla' made with the finest organic vanilla beans sourced from Papua New Guinea -- we take pride in our quality.";
             
     // creates text & a button for homeTabContent
     const hTCTitle = document.createElement('h2');
             hTCTitle.classList.add('hTCTitle');
-            hTCTitle.textContent = "Gift cards make the coolest gifts!";
+            hTCTitle.textContent = "Fructece makes the coolest gift!";
     const hTCText = document.createElement('h3');
             hTCText.classList.add('hTCText');
             hTCText.textContent = "Treat the graduates in your life to their favorite flavors!";
@@ -47,16 +101,13 @@ const homeTab = (function() {
             hTCButton.classList.add('hTCButton');
             hTCButton.textContent = "Order online";
 
-    // creates homeTabIntro div
-    const homeTabIntro = document.createElement('div');
-            homeTabIntro.classList.add('homeTabIntro');
-            homeTabIntro.textContent = "Opened . Quality you can taste!";
-
     // function that appends each element made above to to 'homeTab' div
     function homeTabCreate() {
         content.appendChild(homeTab);
         homeTab.appendChild(homeTabLogo);
         homeTab.appendChild(homeTabIntro);
+        homeTabIntro.appendChild(homeTabIntroHeader);
+        homeTabIntro.appendChild(homeTabIntroText);
         // homeTab.appendChild(homeTabTitle);
         homeTab.appendChild(homeTabContent);
         homeTabContent.appendChild(hTCTitle);
@@ -244,6 +295,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Menu.js */ "./src/Menu.js");
 /* harmony import */ var _Home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.js */ "./src/Home.js");
+/* harmony import */ var _Contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Contact.js */ "./src/Contact.js");
 
 
 
@@ -338,11 +390,22 @@ const tabControls = (function() {
         _Menu_js__WEBPACK_IMPORTED_MODULE_0__.menuTab.disable();
     }
 
+    function enableContact() {
+        _Contact_js__WEBPACK_IMPORTED_MODULE_2__.contactUsTab.create();
+        footerContent.footer();
+    }
+
+    function disableContact() {
+        _Contact_js__WEBPACK_IMPORTED_MODULE_2__.contactUsTab.disable();
+    }
+
     return {
     enableHome: enableHome,
     disableHome: disableHome,
     enableMenu: enableMenu,
-    disableMenu: disableMenu
+    disableMenu: disableMenu,
+    enableContact: enableContact,
+    disableContact: disableContact
     }
 
 })();
@@ -456,6 +519,9 @@ _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.footerContent.footer();
 // logic for tabbed browsing
 const clickedTab = (function() {
     
+            // array that tracks the last two clicked tabs
+            const tabArray = [];
+
             // variables for grabbing each tab
             const home = document.querySelector('.home');
             const menu = document.querySelector('.menu');
@@ -467,6 +533,7 @@ const clickedTab = (function() {
             // private function for making home the default tab
             function _defaultTab() {
                 home.classList.add('choiceButton');
+                tabArray.push('Home');
             }
 
             // event listeners for each tab
@@ -479,24 +546,33 @@ const clickedTab = (function() {
 
         switch(true) {
             case this.textContent === 'Menu':
+                tabArray.push('Menu');
                 _tabCreate('Menu');
                 home.classList.remove('choiceButton');
                 contact.classList.remove('choiceButton');
                 this.classList.add('choiceButton');
             break;
             case this.textContent === 'Contact Us':
+                tabArray.push('Contact Us');
                 _tabCreate("Contact Us");
                 home.classList.remove('choiceButton');
                 menu.classList.remove('choiceButton');
                 this.classList.add('choiceButton');
             break;
             case this.textContent === 'Home':
+                tabArray.push('Home');
                 _tabCreate("Home");
                 menu.classList.remove('choiceButton');
                 contact.classList.remove('choiceButton');    
                 this.classList.add('choiceButton');
             break;
         }
+
+        // conditional that keeps only the last two clicked tabs in an array for use in the _tabCreate function
+        if (tabArray.length == 2) {
+            tabArray.shift();
+        }
+
     }
 
     // private function that displays content for current tab
@@ -507,24 +583,56 @@ const clickedTab = (function() {
 
         switch(true) {
             case tab === "Menu":
+                // conditional that ensures user cannot spam the tab
                 if (tabHighlight.textContent === "Menu") {
                 } else {
-                    _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableHome();
-                    _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableMenu();
+                    // switch statement ensuring that functions for removing
+                    // DOM elements will not conflict with one another
+                    switch(true) {
+                        case tabArray[0] === "Home":
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableHome();
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableMenu();
+                        break;
+                        case tabArray[0] === "Contact Us":
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableContact();
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableMenu();  
+                        break;
+                    }
                 }
             break;
             case tab === "Contact Us":
+                // conditional that ensures user cannot spam the tab
                 if (tabHighlight.textContent === "Contact Us") {
                 } else {
-                    console.log(tab);                    
+                    // switch statement ensuring that functions for removing
+                    // DOM elements will not conflict with one another
+                    switch(true) {
+                        case tabArray[0] === "Home":
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableHome();
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableContact();
+                        break;
+                        case tabArray[0] === "Menu":
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableMenu();
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableContact();  
+                        break;
+                    }
                 }   
             break;
             case tab === "Home":
+                // conditional that ensures user cannot spam the tab
                 if (tabHighlight.textContent === "Home") {
 
                 } else {
-                    _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableMenu();
-                    _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableHome();
+                    switch(true) {
+                        case tabArray[0] === "Contact Us":
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableContact();
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableHome();
+                        break;
+                        case tabArray[0] === "Menu":
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.disableMenu();
+                            _Page_Layout_js__WEBPACK_IMPORTED_MODULE_0__.tabControls.enableHome();  
+                        break;
+                    }
                 } 
             break;
         }
