@@ -212,7 +212,7 @@ body, html {
         justify-items: center;
         background-color: rgb(255, 204, 197);
         box-shadow: 0px 0px 5px black inset;
-        background-image: url(/src/Images/OP-Rest-Logo-red-2.png);
+        background-image: url(Images/OP-Rest-Logo-red-2.png);
         background-repeat: no-repeat;
         background-position-x: 50%;
     }
@@ -233,7 +233,7 @@ body, html {
         justify-items: center;
         background-color: rgb(255, 204, 197);
         box-shadow: 0px 0px 5px black inset;
-        background-image: url(/src/Images/OP-Rest-Logo-red-2.png);
+        background-image: url(Images/OP-Rest-Logo-red-2.png);
         background-repeat: no-repeat;
         background-position-x: 50%;
         background-position-y: 50%;
@@ -331,7 +331,7 @@ body, html {
     width: 80%;
     height: 100%;
     background-color: #f26b4b;
-    background-image: url(/src/Images/OP-Rest-Finalized-Card2_400x400.png);
+    background-image: url(Images/OP-Rest-Finalized-Card2_400x400.png);
     background-repeat: no-repeat;
     background-position-x: 95%;
     background-position-y: 50%;
@@ -415,7 +415,7 @@ body, html {
             "burger"
             "burger";
     grid-gap: 5px;
-    background-image: url(/src/Images/fructeceBG.svg);
+    background-image: url(Images/fructeceBG.svg);
     background-attachment: fixed;
     height: 100%;
     width: min(90%, 1000px);
@@ -501,7 +501,7 @@ body, html {
                     grid-row: 1/3;
                     justify-self: center;
                     align-items: center;
-                    background-image: url(/src/Images/OP-Rest-Vanilla.jpg);
+                    background-image: url(Images/OP-Rest-Vanilla.jpg);
                     background-repeat: no-repeat;
                     background-size: auto;
                     background-image: border inset 0px 0px 5px black;
@@ -526,7 +526,7 @@ body, html {
                     justify-self: center;
                     align-items: end;
                     align-self: end;
-                    background-image: url(/src/Images/OP-Rest-Vanilla.jpg);
+                    background-image: url(Images/OP-Rest-Vanilla.jpg);
                     background-repeat: no-repeat;
                     background-size: auto;
                     background-position-x: 50%;
