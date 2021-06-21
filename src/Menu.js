@@ -33,7 +33,7 @@ const menuTab = (function() {
                 // style + text of menu item 2
                 menuItem2.classList.add('menuItem');
                 menuPicture2.classList.add('itemPicture');
-                menuPicture2.style.cssText = "background-image: url(/src/Images/OP-Rest-Choc.jpg); align-self: center;";
+                menuPicture2.style.cssText = "background-image: url(Images/OP-Rest-Choc.jpg); align-self: center;";
                 topDescription2.classList.add('topDescription');
                 topDescription2.textContent = 'Belgium Chocolate Special';
                 bottomDescription2.classList.add('bottomDescription');
@@ -48,7 +48,7 @@ const menuTab = (function() {
                 // style + text of menu item 3
                 menuItem3.classList.add('menuItem');
                 menuPicture3.classList.add('itemPicture');
-                menuPicture3.style.cssText = "background-image: url(/src/Images/OP-Rest-Coffee3.jpg); ";
+                menuPicture3.style.cssText = "background-image: url(Images/OP-Rest-Coffee3.jpg); ";
                 topDescription3.classList.add('topDescription');
                 topDescription3.textContent = 'Coffee Dolce';
                 bottomDescription3.classList.add('bottomDescription');
@@ -64,7 +64,7 @@ const menuTab = (function() {
                 
                 menuItem4.classList.add('menuItem');
                 menuPicture4.classList.add('itemPicture');
-                menuPicture4.style.cssText = "background-image: url(/src/Images/OP-Rest-Peach280.jpg);";
+                menuPicture4.style.cssText = "background-image: url(Images/OP-Rest-Peach280.jpg);";
                 topDescription4.classList.add('topDescription');
                 topDescription4.textContent = 'Georgia Peach Cobbler';
                 bottomDescription4.classList.add('bottomDescription');
