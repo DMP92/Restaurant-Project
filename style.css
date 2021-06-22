@@ -92,7 +92,7 @@ body, html {
     margin-right: 0px;
     background: linear-gradient(90deg, #fc827b, #bc2c5c);
     width: 100%;
-    height: var(--header-height);
+    height: 300px;
     box-shadow:  0px 0px 15px black;
     /*  red color - #75152d */
 }
