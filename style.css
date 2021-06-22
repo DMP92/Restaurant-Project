@@ -6,7 +6,7 @@
         --hours-font: 35px;
         --map-width: 500px;
         --map-height: 550px;
-        --homeTab: 400px 1fr 1fr 10%;
+        --homeTab: 400px 1fr 1fr;
         --header-height: 100%;
         --header-top: 0%;
     }
@@ -20,7 +20,7 @@
         --hours-font: 23px;
         --map-width: 500px;
         --map-height: 550px;
-        --homeTab: 400px 1fr 1fr 10%;
+        --homeTab: 400px 1fr 1fr;
         --header-height: 90%;
         --header-top: 0%;
     }
@@ -34,7 +34,7 @@
         --hours-font: 18px;
         --map-width: 400px;
         --map-height: 450px;
-        --homeTab: 400px 1fr 1fr 10%;
+        --homeTab: 400px 1fr 1fr;
         --header-height: 80%;
         --header-top: -5%;
     }
