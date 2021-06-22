@@ -236,7 +236,7 @@ body, html {
             "homeTabContent";
     grid-gap: 20px;
     
-    background-image: url(/src/Images/fructeceBG.svg);
+    background-image: url(/Images/fructeceBG.svg);
     background-attachment: fixed;
     height: 100%;
     width: min(90%, 1000px);
@@ -263,7 +263,7 @@ body, html {
         justify-items: center;
         background-color: rgb(255, 204, 197);
         box-shadow: 0px 0px 5px black inset;
-        background-image: url(/src/Images/OP-Rest-Logo-red-2.png);
+        background-image: url(/Images/OP-Rest-Logo-red-2.png);
         background-repeat: no-repeat;
         background-position-x: 50%;
     }
@@ -284,7 +284,7 @@ body, html {
         justify-items: center;
         background-color: rgb(255, 204, 197);
         box-shadow: 0px 0px 5px black inset;
-        background-image: url(/src/Images/OP-Rest-Logo-red-2.png);
+        background-image: url(/Images/OP-Rest-Logo-red-2.png);
         background-repeat: no-repeat;
         background-position-x: 50%;
         background-position-y: 50%;
@@ -466,7 +466,7 @@ body, html {
             "burger"
             "burger";
     grid-gap: 5px;
-    background-image: url(/src/Images/fructeceBG.svg);
+    background-image: url(/Images/fructeceBG.svg);
     background-attachment: fixed;
     height: 100%;
     width: min(90%, 1000px);
@@ -585,7 +585,7 @@ body, html {
                     grid-row: 1/3;
                     justify-self: center;
                     align-items: center;
-                    background-image: url(/src/Images/OP-Rest-Vanilla.jpg);
+                    background-image: url(/Images/OP-Rest-Vanilla.jpg);
                     background-repeat: no-repeat;
                     background-size: auto;
                     background-image: border inset 0px 0px 5px black;
@@ -609,7 +609,7 @@ body, html {
                     justify-self: center;
                     align-items: end;
                     align-self: end;
-                    background-image: url(/src/Images/OP-Rest-Vanilla.jpg);
+                    background-image: url(/Images/OP-Rest-Vanilla.jpg);
                     background-repeat: no-repeat;
                     background-size: auto;
                     background-position-x: 50%;
@@ -635,7 +635,7 @@ body, html {
                     justify-self: center;
                     align-items: end;
                     align-self: end;
-                    background-image: url(/src/Images/OP-Rest-Vanilla.jpg);
+                    background-image: url(/Images/OP-Rest-Vanilla.jpg);
                     background-repeat: no-repeat;
                     background-size: auto;
                     background-position-x: 50%;
@@ -837,7 +837,8 @@ body, html {
                                 display: flex;
                                 justify-content: start;
                                 align-items: center;
-                                grid-column: var(--hours-column);                                grid-row: 1/2;
+                                grid-column: var(--hours-column);                                
+                                grid-row: 1/2;
                             }
 
             .tue {
@@ -857,7 +858,8 @@ body, html {
                                 display: flex;
                                 justify-content: start;
                                 align-items: center;
-                                grid-column: var(--hours-column);                                grid-row: 2/3;
+                                grid-column: var(--hours-column);                                
+                                grid-row: 2/3;
                             }
 
             .wed {
@@ -878,7 +880,8 @@ body, html {
                                 display: flex;
                                 justify-content: start;
                                 align-items: center;
-                                grid-column: var(--hours-column);                                grid-row: 3/4;
+                                grid-column: var(--hours-column);                                
+                                grid-row: 3/4;
                             }
                             
             .thu {
@@ -899,7 +902,8 @@ body, html {
                                 display: flex;
                                 justify-content: start;
                                 align-items: center;
-                                grid-column: var(--hours-column);                                grid-row: 4/5;
+                                grid-column: var(--hours-column);                                
+                                grid-row: 4/5;
                             }
                 
                 
@@ -920,7 +924,8 @@ body, html {
                                 display: flex;
                                 justify-content: start;
                                 align-items: center;
-                                grid-column: var(--hours-column);                                grid-row: 5/6;
+                                grid-column: var(--hours-column);                                
+                                grid-row: 5/6;
                                 width: 100%;
                                 flex-wrap: nowrap;
                             }
@@ -943,7 +948,8 @@ body, html {
                                 display: flex;
                                 justify-content: start;
                                 align-items: center;
-                                grid-column: var(--hours-column);                                grid-row: 6/7;
+                                grid-column: var(--hours-column);                                
+                                grid-row: 6/7;
                                 width: 100%;
                         
                             }
