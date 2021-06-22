@@ -254,7 +254,7 @@ const homeTab = (function() {
     // creates text for the homeTabIntro section
     const homeTabIntroText = document.createElement('h2');
             homeTabIntroText.classList.add('homeTabIntroText');
-            homeTabIntroText.textContent = "100% organic and GMO free. A family owned business since the summer 1855. We've been helping people beat the summer heat for nearly two centuries! We don't have a huge menu, but here at Fructece -- we believe in quality over quantity. We source our organic ingredients from all over the world. Whether it's our 'Belgium Chocolate Special' made with real Belgium chocolate, or our 'Classic Vanilla' made with the finest organic vanilla beans sourced from Papua New Guinea -- we take pride in our quality.";
+            homeTabIntroText.textContent = "100% organic and GMO free. A family owned business since the summer of 1855. We've been helping people beat the summer heat for nearly two centuries! We don't have a huge menu, but here at Fructece -- we believe in quality over quantity. We source our organic ingredients from all over the world. Whether it's our 'Belgium Chocolate Special' made with real Belgium chocolate, or our 'Classic Vanilla' made with the finest organic vanilla beans sourced from Papua New Guinea -- we take pride in our quality.";
             
     // creates text & a button for homeTabContent
     const hTCTitle = document.createElement('h2');
