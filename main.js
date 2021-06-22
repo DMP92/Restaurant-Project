@@ -117,7 +117,6 @@ const contactUsTab = (function() {
 
         // variable for fetching window width
         const winWidth = window.innerWidth;
-        console.log(winWidth);
         if (winWidth > 768) {
             iframe.innerHTML = `
             <iframe 
