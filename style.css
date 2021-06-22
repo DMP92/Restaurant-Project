@@ -284,7 +284,7 @@ body, html {
     grid-area: "body";
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: var(--homeTab);
+    grid-template-rows: 400px 1fr 1fr .1fr;
     grid-template-areas: 
             "homeLogo homeLogo"
             "homeTabTitle homeTabTitle"
