@@ -228,7 +228,7 @@ const menuTab = (function() {
                 // style + text of menu item 2
                 menuItem2.classList.add('menuItem');
                 menuPicture2.classList.add('itemPicture');
-                menuPicture2.style.cssText = "background-image: url(/Images/OP-Rest-Choc.jpg); align-self: center;";
+                menuPicture2.style.cssText = "background-image: url(Images/OP-Rest-Choc.jpg); align-self: center;";
                 topDescription2.classList.add('topDescription');
                 topDescription2.textContent = 'Belgium Chocolate Special';
                 bottomDescription2.classList.add('bottomDescription');
