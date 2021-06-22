@@ -259,7 +259,7 @@ const menuTab = (function() {
                 
                 menuItem4.classList.add('menuItem');
                 menuPicture4.classList.add('itemPicture');
-                menuPicture4.style.cssText = "background-image: url(/Images/OP-Rest-Peach280.jpg);";
+                menuPicture4.style.cssText = "background-image: url(/Images/OP-Rest-Peach280.jpg)";
                 topDescription4.classList.add('topDescription');
                 topDescription4.textContent = 'Georgia Peach Cobbler';
                 bottomDescription4.classList.add('bottomDescription');
