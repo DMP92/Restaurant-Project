@@ -841,7 +841,7 @@ body, html {
     text-align: center;
     border-radius: 5px;
     background: linear-gradient(90deg, #fc827b, #bc2c5c);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
