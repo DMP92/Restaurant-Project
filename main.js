@@ -265,7 +265,7 @@ const homeTab = (function() {
             hTCText.textContent = "Treat the graduates in your life to their favorite flavors!";
     const hTCButton = document.createElement('div');
             hTCButton.classList.add('hTCButton');
-            hTCButton.innerHTML = "<a href="https://en.wikipedia.org/wiki/Rickrolling"><button>Order online</button></a>;
+            hTCButton.innerHTML = "<a href="https://en.wikipedia.org/wiki/Rickrolling"><button>Order online</button></a>";
 
     // function that appends each element made above to to 'homeTab' div
     function homeTabCreate() {
