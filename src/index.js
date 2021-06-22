@@ -5,6 +5,7 @@ header.header();
 tabControls.enableHome();
 footerContent.footer();
 
+
 // logic for tabbed browsing
 const clickedTab = (function() {
     
