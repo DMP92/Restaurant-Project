@@ -594,7 +594,8 @@ const footerContent = (function() {
         // append footer to page
         content.appendChild(footer);
         
-        h3.textContent = "Footer of Website";
+        h3.innerHTML = "<a href='https://github.com/DMP92/Restaurant-Project'>Source Code</a>";
+
         footer.appendChild(h3);
     }
 
