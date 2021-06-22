@@ -101,10 +101,10 @@ body, html {
 @media screen and (min-width: 561px) {
     .title {
         position: relative;
-        top: 30px;
         grid-area: "title";
+        top: 35%;
         justify-self: center;
-        align-self: end;
+        align-self: center;
         font-family: Papyrus;
         font-size: 7rem;
         margin: 0;
@@ -115,11 +115,11 @@ body, html {
 
 @media screen and (max-width: 560px) {
     .title {
+        top: 35%;
         position: relative;
-        top: 30px;
         grid-area: "title";
         justify-self: center;
-        align-self: start;
+        align-self: center;
         font-family: Papyrus;
         font-size: 5rem;
         margin: 0;
@@ -130,6 +130,7 @@ body, html {
 
 @media screen and (max-width: 400px) {
     .title {
+        top: 35%;
         position: relative;
         grid-area: "title";
         justify-self: center;
