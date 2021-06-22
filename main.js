@@ -263,9 +263,9 @@ const homeTab = (function() {
     const hTCText = document.createElement('h3');
             hTCText.classList.add('hTCText');
             hTCText.textContent = "Treat the graduates in your life to their favorite flavors!";
-    const hTCButton = document.createElement('button');
+    const hTCButton = document.createElement('div');
             hTCButton.classList.add('hTCButton');
-            hTCButton.textContent = "Order online";
+            hTCButton.innerHTML = "<a href="https://en.wikipedia.org/wiki/Rickrolling"><button>Order online</button></a>;
 
     // function that appends each element made above to to 'homeTab' div
     function homeTabCreate() {
