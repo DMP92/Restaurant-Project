@@ -119,7 +119,7 @@ body, html {
         top: 30px;
         grid-area: "title";
         justify-self: center;
-        align-self: end;
+        align-self: start;
         font-family: Papyrus;
         font-size: 5rem;
         margin: 0;
