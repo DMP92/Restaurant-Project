@@ -236,7 +236,7 @@ body, html {
             "homeTabContent";
     grid-gap: 20px;
     
-    background-image: url(/Images/fructeceBG.svg);
+    background-image: url("Images/fructeceBG.svg");
     background-attachment: fixed;
     height: 100%;
     width: min(90%, 1000px);
