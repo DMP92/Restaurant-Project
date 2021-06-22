@@ -494,17 +494,17 @@ body, html {
             width: min(90%, 300px);
             height: 100px;
             border-radius: 50px;
-            background-color: white;
-            color: #f26b4b;
+            background-color: white !important;
+            color: #f26b4b !important;
             text-shadow: none !important;
         }
 
         .hTCButton:hover {
-            background-color: rgba(255, 255, 255, .8);
+            background-color: rgba(255, 255, 255, .8) !important;
         }
 
         .hTCButton:active {
-            border: 5px solid rgba(255, 255, 255, 1);
+            border: 5px solid rgba(255, 255, 255, 1) !important;
         }
 
 
