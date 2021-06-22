@@ -39,7 +39,7 @@
         --homeTab: 400px 1fr 1fr 1fr;
         --header-height: 80%;
         --header-top: -5%;
-        --bgfixed: fixed;
+        --bgfixed: none;
     }
 }
 
