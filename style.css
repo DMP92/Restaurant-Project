@@ -1101,3 +1101,21 @@ body, html {
     text-shadow: 0px 0px 5px #f26b4b;
 }
 
+
+.outro:visited {
+    text-decoration: none !important;
+    color: rgb(216, 143, 152) !important;
+    text-shadow: 0px 0px 5px #f26b4b;
+
+}
+
+a {
+    text-decoration: none !important;
+    color: rgb(216, 143, 152) !important;
+    text-shadow: 0px 0px 5px #f26b4b;
+
+}
+
+a:hover {
+    color: white !important;
+}
